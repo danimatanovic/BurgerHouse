@@ -1,0 +1,115 @@
+header {
+    background-image: url(../pictures/header/header\ picture.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .top-header {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 5%;
+        #logo-dark {
+            height: 58px;
+        }
+        .top-header-right {
+            width: 45%;
+            .top-header-right-top {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                a {
+                    font-weight: 700;
+                    font-size: 17px;
+                    margin-left: 2%;
+                }
+            }
+            .top-header-right-bottom {
+                position: relative;
+                z-index: 2;
+                display: flex;
+                justify-content: space-between;
+                padding: 4% 0 0 0;
+                a {
+                    font-family: "Bebas Neue";
+                    font-weight: 700;
+                    font-size: 21px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+    .bottom-header {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        .bottom-header-left {
+            padding-top: 10%;
+            p {
+                font-family: "Bebas Neue";
+                font-size: 21px;
+                border: 2px dashed #3D2514;
+                width: fit-content;
+                padding: 0.5% 1%;
+            }
+            h1 {
+                font-family: "Alfa Slab One";
+                font-size: 100px;
+                font-weight: 400;
+                -webkit-text-shadow: 5px 4px 4px rgb(255 255 255 / 75%);
+                -moz-text-shadow: 5px 4px 4px rgb(255 255 255 / 75%);
+                text-shadow: 5px 4px 4px rgb(255 255 255 / 75%);
+            }
+            h2 {
+                font-family: "Alfa Slab One";
+                font-size: 52px;
+                font-weight: 400;
+                margin-top: -1%;
+                -webkit-text-shadow: 5px 4px 4px rgb(255 255 255 / 75%);
+                -moz-text-shadow: 5px 4px 4px rgb(255 255 255 / 75%);
+                text-shadow: 5px 4px 4px rgb(255 255 255 / 75%);
+            }
+        }
+        .bottom-header-right{
+            position: relative;
+            .price-sale{
+                position: absolute;
+                z-index: 2;
+                background-color: #bf2121;
+                border-radius: 50%;
+                padding: 2%;
+                bottom: 20%;
+                left: 15%;
+                transform: translate(-15%, -20%);
+                .price{
+                    border: 2px dashed white;
+                    font-family: 'Bebas Neue';
+                    font-weight: 700;
+                    font-size: 30px;
+                    color: white;
+                    border-radius: 50%;
+                    padding: 30px;
+                    text-align: center;
+                    b{
+                        font-size: 50px;
+                    }
+                    span{
+                        display: flex;
+                        justify-content: space-between;
+                        i{
+                            font-style: normal;
+                        }
+                    }
+                }
+            }
+            img{
+             bottom: 20%;
+             position: relative;
+             max-width: 100%;
+             left: 20%;
+             transform: translate(-20%);
+            }
+        }
+    }
+}
