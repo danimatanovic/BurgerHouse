@@ -1,0 +1,92 @@
+.try-today {
+    padding-top: 5%;
+    .margin {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 3%;
+        p {
+            position: absolute;
+            z-index: 2;
+            color: white;
+            font-size: 25px;
+            font-family: "Bebas Neue";
+            left: 25px;
+            top: 25px;
+            span {
+                font-size: 40px;
+                font-weight: 700;
+            }
+        }
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            position: relative;
+            border-radius: 15px;
+        }
+        .try-burger-one {
+            grid-row: span 2;
+            position: relative;
+        }
+        .try-burger-two {
+            position: relative;
+        }
+        .try-burger-three {
+            position: relative;
+        }
+    }
+}
+.choose-end-enjoy {
+    margin-top: 5%;
+    text-align: center;
+    .always-tasty-burger {
+        width: fit-content;
+        background-color: rgba(255, 192, 69, 1);
+        font-family: "Bebas Neue";
+        font-weight: 700;
+        font-size: 25px;
+        margin: 0 auto;
+        padding: 1%;
+    }
+    h2 {
+        font-size: 50px;
+        font-family: 'Alfa Slab One';
+        margin:2% 0 1% 0;
+    }
+    p{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .choose-burger{
+        margin: 5% 0;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        img{
+            height: 325px;
+            width: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+            span{margin-top: 5%;
+                font-size: 38px;
+                font-weight: 700;
+                font-family: "Bebas Neue";
+            }
+        p{
+            margin-top: 4%;
+        }
+        button{
+            background-color: #bf2121;
+            font-family: 'Alfa Slab One';
+            color: white;
+            padding: 3%;
+            border: none;
+            max-width: 180px;
+            width: 100%;
+            margin-top: 8%;
+        }
+    }
+}

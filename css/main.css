@@ -51,11 +51,17 @@ body {
   background-color: white;
   color: #3D2514;
   font-weight: 400;
+  font-size: 17px;
 }
 
 a {
   text-decoration: none;
   color: #3D2514;
+}
+
+.margin {
+  width: 90%;
+  margin: 0 auto;
 }
 
 header {
@@ -67,8 +73,6 @@ header {
 header .top-header {
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
   padding-top: 5%;
 }
 header .top-header #logo-dark {
@@ -84,7 +88,6 @@ header .top-header .top-header-right .top-header-right-top {
 }
 header .top-header .top-header-right .top-header-right-top a {
   font-weight: 700;
-  font-size: 17px;
   margin-left: 2%;
 }
 header .top-header .top-header-right .top-header-right-bottom {
@@ -101,8 +104,6 @@ header .top-header .top-header-right .top-header-right-bottom a {
   letter-spacing: 2px;
 }
 header .bottom-header {
-  width: 90%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -112,7 +113,7 @@ header .bottom-header .bottom-header-left {
 header .bottom-header .bottom-header-left p {
   font-family: "Bebas Neue";
   font-size: 21px;
-  border: 2px dashed #3D2514;
+  border: 2px dashed #3d2514;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -144,22 +145,25 @@ header .bottom-header .bottom-header-right .price-sale {
   background-color: #bf2121;
   border-radius: 50%;
   padding: 2%;
+  max-width: 200px;
+  width: 100%;
   bottom: 20%;
   left: 15%;
   transform: translate(-15%, -20%);
 }
 header .bottom-header .bottom-header-right .price-sale .price {
-  border: 2px dashed white;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='white' stroke-width='6' stroke-dasharray='12' stroke-dashoffset='100' stroke-linecap='butt'/%3e%3c/svg%3e");
   font-family: "Bebas Neue";
   font-weight: 700;
-  font-size: 30px;
+  font-size: 38px;
   color: white;
   border-radius: 50%;
-  padding: 30px;
+  padding: 20%;
+  width: 100%;
   text-align: center;
 }
 header .bottom-header .bottom-header-right .price-sale .price b {
-  font-size: 50px;
+  font-size: 62px;
 }
 header .bottom-header .bottom-header-right .price-sale .price span {
   display: flex;
@@ -174,4 +178,105 @@ header .bottom-header .bottom-header-right img {
   max-width: 100%;
   left: 20%;
   transform: translate(-20%);
+}
+
+.try-today {
+  padding-top: 5%;
+}
+.try-today .margin {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 3%;
+}
+.try-today .margin p {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 25px;
+  font-family: "Bebas Neue";
+  left: 25px;
+  top: 25px;
+}
+.try-today .margin p span {
+  font-size: 40px;
+  font-weight: 700;
+}
+.try-today .margin img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: relative;
+  border-radius: 15px;
+}
+.try-today .margin .try-burger-one {
+  grid-row: span 2;
+  position: relative;
+}
+.try-today .margin .try-burger-two {
+  position: relative;
+}
+.try-today .margin .try-burger-three {
+  position: relative;
+}
+
+.choose-end-enjoy {
+  margin-top: 5%;
+  text-align: center;
+}
+.choose-end-enjoy .always-tasty-burger {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgb(255, 192, 69);
+  font-family: "Bebas Neue";
+  font-weight: 700;
+  font-size: 25px;
+  margin: 0 auto;
+  padding: 1%;
+}
+.choose-end-enjoy h2 {
+  font-size: 50px;
+  font-family: "Alfa Slab One";
+  margin: 2% 0 1% 0;
+}
+.choose-end-enjoy p {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.choose-end-enjoy .choose-burger {
+  margin: 5% 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.choose-end-enjoy .choose-burger img {
+  height: 325px;
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.choose-end-enjoy .choose-burger span {
+  margin-top: 5%;
+  font-size: 38px;
+  font-weight: 700;
+  font-family: "Bebas Neue";
+}
+.choose-end-enjoy .choose-burger p {
+  margin-top: 4%;
+}
+.choose-end-enjoy .choose-burger button {
+  background-color: #bf2121;
+  font-family: "Alfa Slab One";
+  color: white;
+  padding: 3%;
+  border: none;
+  max-width: 180px;
+  width: 100%;
+  margin-top: 8%;
 }/*# sourceMappingURL=main.css.map */
