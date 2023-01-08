@@ -535,10 +535,6 @@ header .bottom-header .bottom-header-right img {
   font-style: normal;
   margin-bottom: 5%;
 }
-.our-story .margin {
-  -webkit-animation: float 3s ease-in-out infinite;
-          animation: float 3s ease-in-out infinite;
-}
 
 .our-story::before {
   background-image: url(../pictures/Burger\ Image\ 2.png);
