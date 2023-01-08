@@ -1,6 +1,6 @@
 footer{
     .footer{
-        background-image: url(../pictures/footer/footer\ picture.jpg);
+        background-image: url(../pictures/footer/footerpicture.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -76,6 +76,9 @@ footer{
             .media{
                 a{
                     margin-left: 5px;
+                    @include lt-md{
+                        margin: 0 auto;
+                    }
                 }
             }
         }

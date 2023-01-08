@@ -243,7 +243,7 @@
     }
 }
 .book-your-table::before {
-    background-image: url(../pictures/Burger\ top.png);
+    background-image: url(../pictures/Burgertop.png);
     content: "";
     position: absolute;
     background-repeat: no-repeat;
@@ -276,7 +276,7 @@
     }
 }
 .book-your-table::after {
-    background-image: url(../pictures/Burger\ 2.png);
+    background-image: url(../pictures/Burger-2.png);
     content: "";
     position: absolute;
     background-repeat: no-repeat;
@@ -311,4 +311,7 @@
         font-family: "Bebas Neue";
         font-size: 25px;
     }
+}
+iframe{
+    width: 100%;
 }

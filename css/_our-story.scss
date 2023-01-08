@@ -21,7 +21,7 @@
     }
 }
 .our-story::before {
-    background-image: url(../pictures/Burger\ Image\ 2.png);
+    background-image: url(../pictures/BurgerImage2.png);
     content: "";
     position: absolute;
     background-repeat: no-repeat;
@@ -32,8 +32,9 @@
     height: 100%;
     animation: float 3s ease-in-out infinite;
     @include lt-sm{
-        width: 100%;
-        left: 15%;
+        width: 135%;
+        left: -35%;
+        height: 110%;
     }
     }
 @keyframes float {

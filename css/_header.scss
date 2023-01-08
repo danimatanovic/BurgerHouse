@@ -1,5 +1,5 @@
 header {
-    background-image: url(../pictures/header/header\ picture.jpg);
+    background-image: url(../pictures/header/headerpicture.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -15,7 +15,7 @@ header {
             .top-header-right-top {
                 display: flex;
                 align-items: center;
-                justify-content: end;
+                justify-content:flex-end;
                 a {
                     font-weight: 700;
                     margin-left: 2%;

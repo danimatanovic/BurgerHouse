@@ -188,7 +188,6 @@ html.no-scroll {
     width: 0vw;
     background: #ffbf45;
     opacity: 0;
-    transform: translateX(0vw);
     z-index: 98;
     transition: 0.4s ease-in-out;
   }
@@ -227,7 +226,7 @@ html.no-scroll {
     opacity: 1;
     width: 100vw;
     transform: translateX(0vw);
-    transition: all 0.6s ease-in-out;
+    transition: all 0.6s cubic-bezier(0, 0, 0.2, 1);
   }
   .no-scroll .logoo {
     opacity: 0;
@@ -355,7 +354,7 @@ button.hamburger {
   }
 }
 header {
-  background-image: url(../pictures/header/header\ picture.jpg);
+  background-image: url(../pictures/header/headerpicture.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -374,7 +373,7 @@ header .top-header .top-header-right {
 header .top-header .top-header-right .top-header-right-top {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 header .top-header .top-header-right .top-header-right-top a {
   font-weight: 700;
@@ -811,7 +810,7 @@ header .bottom-header .bottom-header-right img {
 }
 
 .book-your-table::before {
-  background-image: url(../pictures/Burger\ top.png);
+  background-image: url(../pictures/Burgertop.png);
   content: "";
   position: absolute;
   background-repeat: no-repeat;
@@ -853,7 +852,7 @@ header .bottom-header .bottom-header-right img {
 }
 
 .book-your-table::after {
-  background-image: url(../pictures/Burger\ 2.png);
+  background-image: url(../pictures/Burger-2.png);
   content: "";
   position: absolute;
   background-repeat: no-repeat;
@@ -903,8 +902,12 @@ header .bottom-header .bottom-header-right img {
   font-size: 25px;
 }
 
+iframe {
+  width: 100%;
+}
+
 footer .footer {
-  background-image: url(../pictures/footer/footer\ picture.jpg);
+  background-image: url(../pictures/footer/footerpicture.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -995,6 +998,11 @@ footer .footer .copyrights .margin p a {
 footer .footer .copyrights .margin .media a {
   margin-left: 5px;
 }
+@media screen and (max-width: 767px) {
+  footer .footer .copyrights .margin .media a {
+    margin: 0 auto;
+  }
+}
 
 .our-story {
   font-family: "Bebas Neue";
@@ -1022,7 +1030,7 @@ footer .footer .copyrights .margin .media a {
 }
 
 .our-story::before {
-  background-image: url(../pictures/Burger\ Image\ 2.png);
+  background-image: url(../pictures/BurgerImage2.png);
   content: "";
   position: absolute;
   background-repeat: no-repeat;
@@ -1036,8 +1044,9 @@ footer .footer .copyrights .margin .media a {
 }
 @media screen and (max-width: 575px) {
   .our-story::before {
-    width: 100%;
-    left: 15%;
+    width: 135%;
+    left: -35%;
+    height: 110%;
   }
 }
 
