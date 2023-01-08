@@ -106,7 +106,7 @@
     }
 }
 .upcoming-events {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     .item {
         height: 550px;
         margin-top: 15px;
@@ -179,9 +179,9 @@
 .book-your-table {
     position: relative;
     z-index: 3;
-    height: 630px;
+    height: 100%;
     overflow: hidden;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
     .book-your-table-inner-section {
         position: relative;
         z-index: 3;
@@ -190,7 +190,13 @@
         margin: 0 auto;
         text-align: center;
         max-width: 780px;
-        height: 530px;
+        height: 100%;
+        @include lt-lg{
+            max-width: 80%;
+        }
+        @include lt-md{
+            max-width: 100%;
+        }
         h3 {
             font-family: "Bebas Neue";
             font-weight: 700;
@@ -203,10 +209,13 @@
         }
         .book-data {
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: repeat(2,1fr);
             gap: 3%;
             @include lt-md {
-                grid-template-columns: auto;
+                grid-template-columns: repeat(1,1fr);
+                max-width: 80%;
+                margin: 0 auto;
+                gap: 0;
             }
             input {
                 height: 60px;
@@ -239,13 +248,13 @@
     position: absolute;
     background-repeat: no-repeat;
     z-index: -1;
-    bottom: -10%;
+    bottom: -7%;
     right: -17%;
-    width: 40%;
-    height: 100%;
+    width: 610px;
+    height: 110%;
     animation: rotation 20s infinite linear;
-    @include lt-xxxl {
-        width: 100%;
+    @include lt-xl{
+        animation: none;
     }
 }
 
@@ -255,10 +264,16 @@
     position: absolute;
     background-repeat: no-repeat;
     z-index: -1;
-    bottom: -13%;
-    left: -35%;
-    width: 40%;
-    height: 100%;
+    bottom: -30%;
+    left: -33%;
+    width: 60%;
+    height: 110%;
+    @include lt-md{
+        left: -10%;
+    }
+    @include lt-sm{
+        display: none;
+    }
 }
 .book-your-table::after {
     background-image: url(../pictures/Burger\ 2.png);
@@ -268,12 +283,9 @@
     z-index: 2;
     top: -6%;
     left: -5%;
-    width: 28%;
+    width: 400px;
     height: 100%;
     animation: rotation 20s infinite linear;
-    @include lt-xxxl {
-        width: 100%;
-    }
 }
 @keyframes rotation {
     from {

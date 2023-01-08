@@ -637,7 +637,7 @@ header .bottom-header .bottom-header-right img {
 }
 
 .upcoming-events {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 .upcoming-events .item {
   height: 550px;
@@ -722,9 +722,9 @@ header .bottom-header .bottom-header-right img {
 .book-your-table {
   position: relative;
   z-index: 3;
-  height: 630px;
+  height: 100%;
   overflow: hidden;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
 }
 .book-your-table .book-your-table-inner-section {
   position: relative;
@@ -736,7 +736,17 @@ header .bottom-header .bottom-header-right img {
   margin: 0 auto;
   text-align: center;
   max-width: 780px;
-  height: 530px;
+  height: 100%;
+}
+@media screen and (max-width: 991px) {
+  .book-your-table .book-your-table-inner-section {
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .book-your-table .book-your-table-inner-section {
+    max-width: 100%;
+  }
 }
 .book-your-table .book-your-table-inner-section h3 {
   font-family: "Bebas Neue";
@@ -750,12 +760,15 @@ header .bottom-header .bottom-header-right img {
 }
 .book-your-table .book-your-table-inner-section .book-data {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, 1fr);
   gap: 3%;
 }
 @media screen and (max-width: 767px) {
   .book-your-table .book-your-table-inner-section .book-data {
-    grid-template-columns: auto;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 0;
   }
 }
 .book-your-table .book-your-table-inner-section .book-data input {
@@ -799,16 +812,17 @@ header .bottom-header .bottom-header-right img {
   position: absolute;
   background-repeat: no-repeat;
   z-index: -1;
-  bottom: -10%;
+  bottom: -7%;
   right: -17%;
-  width: 40%;
-  height: 100%;
+  width: 610px;
+  height: 110%;
   -webkit-animation: rotation 20s infinite linear;
           animation: rotation 20s infinite linear;
 }
-@media screen and (max-width: 1399px) {
+@media screen and (max-width: 1199px) {
   .book-your-table::before {
-    width: 100%;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 
@@ -818,10 +832,20 @@ header .bottom-header .bottom-header-right img {
   position: absolute;
   background-repeat: no-repeat;
   z-index: -1;
-  bottom: -13%;
-  left: -35%;
-  width: 40%;
-  height: 100%;
+  bottom: -30%;
+  left: -33%;
+  width: 60%;
+  height: 110%;
+}
+@media screen and (max-width: 767px) {
+  .book-your-table-inner-section::before {
+    left: -10%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .book-your-table-inner-section::before {
+    display: none;
+  }
 }
 
 .book-your-table::after {
@@ -832,15 +856,10 @@ header .bottom-header .bottom-header-right img {
   z-index: 2;
   top: -6%;
   left: -5%;
-  width: 28%;
+  width: 400px;
   height: 100%;
   -webkit-animation: rotation 20s infinite linear;
           animation: rotation 20s infinite linear;
-}
-@media screen and (max-width: 1399px) {
-  .book-your-table::after {
-    width: 100%;
-  }
 }
 
 @-webkit-keyframes rotation {
