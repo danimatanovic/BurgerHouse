@@ -292,7 +292,7 @@ header .bottom-header .bottom-header-right img {
 }
 
 .upcoming-events {
-  margin-bottom: 10%;
+  margin-bottom: 7%;
 }
 .upcoming-events .item {
   height: 550px;
@@ -329,7 +329,7 @@ header .bottom-header .bottom-header-right img {
   width: 100%;
 }
 .upcoming-events .slide .upcoming-events-right img {
-  height: 100%;
+  height: 435px;
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -351,10 +351,118 @@ header .bottom-header .bottom-header-right img {
   bottom: 22%;
   text-align: left;
   margin-left: 8%;
+  max-width: 92%;
 }
 
 .upcoming-events .upcoming-events-slide .slick-dots li button:hover:before,
 .slick-dots li button:focus:before {
   color: #ffbf45;
   opacity: 0.5;
+}
+
+.book-your-table {
+  position: relative;
+  z-index: 2;
+}
+.book-your-table #left-burger {
+  position: absolute;
+  z-index: 4;
+  top: -42%;
+  left: -5%;
+  -webkit-animation: rotation 10s infinite linear;
+          animation: rotation 10s infinite linear;
+}
+.book-your-table #bottle {
+  position: absolute;
+  z-index: 2;
+  bottom: -32%;
+  left: 10%;
+}
+.book-your-table .book-your-table-inner-section {
+  position: relative;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 780px;
+}
+.book-your-table .book-your-table-inner-section h3 {
+  font-family: "Bebas Neue";
+  font-weight: 700;
+  font-size: 29px;
+}
+.book-your-table .book-your-table-inner-section h4 {
+  font-family: "Alfa Slab One";
+  font-size: 42px;
+  margin-bottom: 8%;
+}
+.book-your-table .book-your-table-inner-section .book-data {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 3%;
+}
+.book-your-table .book-your-table-inner-section .book-data input {
+  height: 60px;
+  padding: 20px 20px 15px 20px;
+  width: 100%;
+  margin-bottom: 7%;
+  border-radius: 6px;
+  border: 1px solid rgb(158, 156, 156);
+}
+.book-your-table .book-your-table-inner-section .book-data input::-moz-placeholder {
+  font-family: "Bebas Neue";
+  font-size: 21px;
+  font-size: 400;
+  color: #3D3D3D;
+}
+.book-your-table .book-your-table-inner-section .book-data input:-ms-input-placeholder {
+  font-family: "Bebas Neue";
+  font-size: 21px;
+  font-size: 400;
+  color: #3D3D3D;
+}
+.book-your-table .book-your-table-inner-section .book-data input::placeholder {
+  font-family: "Bebas Neue";
+  font-size: 21px;
+  font-size: 400;
+  color: #3D3D3D;
+}
+.book-your-table .book-your-table-inner-section .book-data input[type=submit] {
+  padding: 10px;
+  background-color: rgb(191, 34, 34);
+  font-family: "Alfa Slab One";
+  font-size: 21px;
+  color: white;
+}
+
+.book-your-table::before {
+  background-image: url(../pictures/Burger\ top.png);
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: -1;
+  top: 32%;
+  right: 0;
+  width: 17%;
+  height: 100%;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }/*# sourceMappingURL=main.css.map */
