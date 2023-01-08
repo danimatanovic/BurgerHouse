@@ -155,9 +155,6 @@ html.no-scroll {
   .header {
     display: none;
   }
-  .bottom-header {
-    margin-top: 5%;
-  }
   .mobile .logo {
     display: flex;
     margin-bottom: 2%;
@@ -403,7 +400,8 @@ header .bottom-header {
 @media screen and (max-width: 1199px) {
   header .bottom-header {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 10%;
   }
 }
 header .bottom-header .bottom-header-left {
@@ -411,7 +409,7 @@ header .bottom-header .bottom-header-left {
 }
 header .bottom-header .bottom-header-left p {
   font-family: "Bebas Neue";
-  font-size: 21px;
+  font-size: min(max(17px, 7vw), 21px);
   border: 2px dashed #3d2514;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -420,7 +418,7 @@ header .bottom-header .bottom-header-left p {
 }
 header .bottom-header .bottom-header-left h1 {
   font-family: "Alfa Slab One";
-  font-size: 100px;
+  font-size: min(max(50px, 10vw), 100px);
   font-weight: 400;
   -webkit-text-shadow: 5px 4px 4px rgba(255, 255, 255, 0.75);
   -moz-text-shadow: 5px 4px 4px rgba(255, 255, 255, 0.75);
@@ -428,7 +426,7 @@ header .bottom-header .bottom-header-left h1 {
 }
 header .bottom-header .bottom-header-left h2 {
   font-family: "Alfa Slab One";
-  font-size: 52px;
+  font-size: min(max(30px, 7vw), 52px);
   font-weight: 400;
   margin-top: -1%;
   -webkit-text-shadow: 5px 4px 4px rgba(255, 255, 255, 0.75);
@@ -450,37 +448,51 @@ header .bottom-header .bottom-header-right .red-price .price-sale {
   border-radius: 50%;
   position: absolute;
   z-index: 2;
-  padding: 15px;
   max-width: 220px;
   height: 220px;
   width: 100%;
   bottom: 0;
+  display: flex;
   left: 15%;
   transform: translate(-15%, 0);
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  header .bottom-header .bottom-header-right .red-price .price-sale {
+    max-width: 135px;
+    height: 135px;
+  }
 }
 header .bottom-header .bottom-header-right .red-price .price-sale .price {
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='white' stroke-width='6' stroke-dasharray='12' stroke-dashoffset='100' stroke-linecap='butt'/%3e%3c/svg%3e");
   font-family: "Bebas Neue";
   font-weight: 700;
-  font-size: 38px;
+  font-size: min(max(25px, 4vw), 38px);
   color: white;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  margin: -2%;
+  width: 190px;
+  height: 190px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-header .bottom-header .bottom-header-right .red-price .price-sale .price .price-text .price-text {
+@media screen and (max-width: 767px) {
+  header .bottom-header .bottom-header-right .red-price .price-sale .price {
+    width: 120px;
+    height: 120px;
+  }
+}
+header .bottom-header .bottom-header-right .red-price .price-sale .price .price-text {
   display: grid;
   grid-template-columns: auto;
 }
-header .bottom-header .bottom-header-right .red-price .price-sale .price .price-text .price-text p {
+header .bottom-header .bottom-header-right .red-price .price-sale .price .price-text p {
   display: flex;
+  align-items: flex-end;
 }
 header .bottom-header .bottom-header-right .red-price .price-sale .price b {
-  font-size: 62px;
+  font-size: min(max(40px, 7vw), 62px);
 }
 header .bottom-header .bottom-header-right .red-price .price-sale .price span {
   max-width: 100%;
@@ -512,7 +524,7 @@ header .bottom-header .bottom-header-right img {
 @media screen and (max-width: 1199px) {
   .try-today .margin {
     margin-bottom: 10%;
-    grid-template-columns: auto;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .try-today .margin p {
@@ -589,6 +601,11 @@ header .bottom-header .bottom-header-right img {
 @media screen and (max-width: 1199px) {
   .choose-end-enjoy .choose-burger {
     grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .choose-end-enjoy .choose-burger {
+    grid-template-columns: auto;
   }
 }
 .choose-end-enjoy .choose-burger img {
