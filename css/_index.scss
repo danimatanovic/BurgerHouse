@@ -4,6 +4,10 @@
         display: grid;
         grid-template-columns: auto auto;
         gap: 3%;
+        @include lt-xl{
+            margin-bottom: 10%;
+            grid-template-columns: auto;
+        }
         p {
             position: absolute;
             z-index: 2;
@@ -29,6 +33,11 @@
         .try-burger-one {
             grid-row: span 2;
             position: relative;
+            @include lt-xl{
+                max-height: 345px;
+                grid-row: span 1;
+                height: 100%;
+            }
         }
         .try-burger-two {
             position: relative;
@@ -63,6 +72,9 @@
         margin: 5% 0;
         display: grid;
         grid-template-columns: auto auto auto;
+        @include lt-xl{
+            grid-template-columns: auto auto; 
+        }
         img{
             height: 325px;
             width: 100%;
@@ -104,6 +116,10 @@
     margin: 0 auto;
     height: 500px;
     padding: 2%;
+    @include lt-lg{
+        grid-template-columns: auto;
+        height: 100%;
+    }
     .upcoming-events-left{
         padding: 5%;
      h3{
@@ -130,6 +146,9 @@
             object-fit: cover;
             width: 100%;
             object-position: center;
+            @include lt-xl{
+                height: 100%;
+            }
         }
     } 
 }}
@@ -182,6 +201,9 @@
         display: grid;
         grid-template-columns: auto auto;
         gap: 3%;
+        @include lt-md{
+            grid-template-columns: auto;
+        }
         input{
             height: 60px;
             padding: 20px 20px 15px 20px;

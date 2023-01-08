@@ -12,11 +12,18 @@ footer{
             grid-template-columns: repeat(2,1fr);
             gap: 5%;
             padding: 0 5%;
+            @include lt-xl{
+                grid-template-columns: auto; 
+                padding: 0 2%;
+            }
         }
         .footer-left{
             padding-bottom: 15%;
             p{
                 margin: 5% 0;
+            }
+            @include lt-xl{
+                padding-bottom: 0;
             }
 
         }
@@ -27,6 +34,9 @@ footer{
             max-width: 400px;
             width: 100%;
             margin: 20% auto 0 auto;
+            @include lt-xl{
+                margin: 0 auto 5% auto;
+            }
             .footer-right-top{
                 margin-bottom: 3%;
                 display: flex;
@@ -43,14 +53,18 @@ footer{
         }
         .copyrights .margin{
             padding-bottom: 1%;
+            display: flex;
+            justify-content: space-between;
+            @include lt-md{
+                flex-direction: column-reverse;
+                text-align: center;
+            }
             p a{
                 color: white;
             }
             .media{
-                display: flex;
-    justify-content: flex-end;
                 a{
-                    margin-left: 2%;
+                    margin-left: 5px;
                 }
             }
         }

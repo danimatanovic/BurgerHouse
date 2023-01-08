@@ -153,6 +153,13 @@ $screen-xxxl-max: 1399px;
   .margin{
     width: 90%;
     margin: 0 auto;
+    @include lt-xl{
+      width: 96%;
+  }
+  @include lt-md{
+    width: 98%;
+}
+
   }
   .nav-menu .wrapper {
     display: -webkit-box;
@@ -184,7 +191,7 @@ $screen-xxxl-max: 1399px;
     -ms-flex-align: center;
     align-items: center;
     margin-left: 0;
-    border-top: 1px solid #ffffff73;
+    border-top: 1px solid #3d251460;
 }
 
 .nav-menu ul.nav-list {
@@ -328,7 +335,6 @@ html.no-scroll {
         display: block;
         padding: 18px;
         text-align: center;
-        border-bottom: 1px solid #ffffff73;
     }
     .nav-menu .menu-top {
         width: 100%;
