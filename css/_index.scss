@@ -90,3 +90,65 @@
         }
     }
 }
+.upcoming-events {
+    margin-bottom: 10%;
+.item{
+    height: 550px;
+    margin-top: 15px;
+}
+.slide{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    max-width: 90%;
+    margin: 0 auto;
+    height: 500px;
+    padding: 2%;
+    .upcoming-events-left{
+        padding: 5%;
+     h3{
+        font-family: "Bebas Neue";
+        font-weight: 700;
+        font-size: 29px;
+     }
+     h4{
+        font-family: 'Alfa Slab One';
+        font-size: 42px;
+        margin-bottom: 8%;
+     }
+     p{
+        font-size: 21px;
+     }
+    }
+    .upcoming-events-right{
+        height: 100%;
+        max-width: 100%;
+        width: 100%;
+        img{
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            width: 100%;
+            object-position: center;
+        }
+    } 
+}}
+        
+.upcoming-events .upcoming-events-slide .slick-dots li button:before {
+    font-size: 80px;
+}
+.upcoming-events .upcoming-events-slide .slick-dots li.slick-active button:before
+{
+    opacity: 1;
+    color: #ffbf45;
+}
+.upcoming-events .upcoming-events-slide .slick-dots{
+   bottom: 22%;
+   text-align: left;
+   margin-left: 8%;
+}
+.upcoming-events .upcoming-events-slide .slick-dots li button:hover:before,
+.slick-dots li button:focus:before{
+    color: #ffbf45;
+    opacity: 0.5;
+}

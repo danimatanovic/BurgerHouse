@@ -139,19 +139,26 @@ header .bottom-header .bottom-header-left h2 {
 header .bottom-header .bottom-header-right {
   position: relative;
 }
-header .bottom-header .bottom-header-right .price-sale {
+header .bottom-header .bottom-header-right .red-price {
+  width: 100%;
+  max-width: 1150px;
+  bottom: 20%;
   position: absolute;
-  z-index: 2;
+  height: 100%;
+}
+header .bottom-header .bottom-header-right .red-price .price-sale {
   background-color: #bf2121;
   border-radius: 50%;
+  position: absolute;
+  z-index: 2;
   padding: 2%;
   max-width: 200px;
   width: 100%;
-  bottom: 20%;
+  bottom: 0;
   left: 15%;
-  transform: translate(-15%, -20%);
+  transform: translate(-15%, 0);
 }
-header .bottom-header .bottom-header-right .price-sale .price {
+header .bottom-header .bottom-header-right .red-price .price-sale .price {
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='white' stroke-width='6' stroke-dasharray='12' stroke-dashoffset='100' stroke-linecap='butt'/%3e%3c/svg%3e");
   font-family: "Bebas Neue";
   font-weight: 700;
@@ -162,22 +169,25 @@ header .bottom-header .bottom-header-right .price-sale .price {
   width: 100%;
   text-align: center;
 }
-header .bottom-header .bottom-header-right .price-sale .price b {
+header .bottom-header .bottom-header-right .red-price .price-sale .price b {
   font-size: 62px;
 }
-header .bottom-header .bottom-header-right .price-sale .price span {
+header .bottom-header .bottom-header-right .red-price .price-sale .price span {
   display: flex;
   justify-content: space-between;
 }
-header .bottom-header .bottom-header-right .price-sale .price span i {
+header .bottom-header .bottom-header-right .red-price .price-sale .price span i {
   font-style: normal;
 }
 header .bottom-header .bottom-header-right img {
   bottom: 20%;
   position: relative;
-  max-width: 100%;
-  left: 20%;
-  transform: translate(-20%);
+  max-width: 1150px;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .try-today {
@@ -279,4 +289,72 @@ header .bottom-header .bottom-header-right img {
   max-width: 180px;
   width: 100%;
   margin-top: 8%;
+}
+
+.upcoming-events {
+  margin-bottom: 10%;
+}
+.upcoming-events .item {
+  height: 550px;
+  margin-top: 15px;
+}
+.upcoming-events .slide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  max-width: 90%;
+  margin: 0 auto;
+  height: 500px;
+  padding: 2%;
+}
+.upcoming-events .slide .upcoming-events-left {
+  padding: 5%;
+}
+.upcoming-events .slide .upcoming-events-left h3 {
+  font-family: "Bebas Neue";
+  font-weight: 700;
+  font-size: 29px;
+}
+.upcoming-events .slide .upcoming-events-left h4 {
+  font-family: "Alfa Slab One";
+  font-size: 42px;
+  margin-bottom: 8%;
+}
+.upcoming-events .slide .upcoming-events-left p {
+  font-size: 21px;
+}
+.upcoming-events .slide .upcoming-events-right {
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+.upcoming-events .slide .upcoming-events-right img {
+  height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.upcoming-events .upcoming-events-slide .slick-dots li button:before {
+  font-size: 80px;
+}
+
+.upcoming-events .upcoming-events-slide .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #ffbf45;
+}
+
+.upcoming-events .upcoming-events-slide .slick-dots {
+  bottom: 22%;
+  text-align: left;
+  margin-left: 8%;
+}
+
+.upcoming-events .upcoming-events-slide .slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  color: #ffbf45;
+  opacity: 0.5;
 }/*# sourceMappingURL=main.css.map */

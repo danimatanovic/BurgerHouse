@@ -68,17 +68,23 @@ header {
         }
         .bottom-header-right {
             position: relative;
-            .price-sale {
+            .red-price{
+                width: 100%;
+                max-width: 1150px;
+                bottom: 20%;
                 position: absolute;
-                z-index: 2;
+                height: 100%;
+              .price-sale {
                 background-color: #bf2121;
                 border-radius: 50%;
+                position: absolute;
+                z-index: 2;
                 padding: 2%;
                 max-width: 200px;
                 width: 100%;
-                bottom: 20%;
+                bottom: 0;
                 left: 15%;
-                transform: translate(-15%, -20%);
+                transform: translate(-15%, 0);
                 .price {
                     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='white' stroke-width='6' stroke-dasharray='12' stroke-dashoffset='100' stroke-linecap='butt'/%3e%3c/svg%3e");
                     font-family: "Bebas Neue";
@@ -100,13 +106,16 @@ header {
                         }
                     }
                 }
+            }  
             }
+            
             img {
                 bottom: 20%;
                 position: relative;
-                max-width: 100%;
-                left: 20%;
-                transform: translate(-20%);
+                max-width: 1150px;
+                width: 100%;
+                object-position: center;
+                object-fit: cover;
             }
         }
     }
