@@ -426,6 +426,7 @@ header .bottom-header .bottom-header-right img {
   font-family: "Alfa Slab One";
   font-size: 21px;
   color: white;
+  cursor: pointer;
 }
 
 .book-your-table::before {
@@ -499,6 +500,10 @@ header .bottom-header .bottom-header-right img {
     -webkit-transform: rotate(359deg);
   }
 }
+.contact {
+  margin-top: 5%;
+}
+
 footer .footer {
   background-image: url(../pictures/footer/footer\ picture.jpg);
   background-size: cover;
