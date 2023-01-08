@@ -502,8 +502,81 @@ header .bottom-header .bottom-header-right img {
 }
 .contact {
   margin-top: 5%;
+  text-align: center;
+}
+.contact h2 {
+  font-family: "Alfa Slab One";
+  font-size: 50px;
+  margin-bottom: 2%;
+  font-style: normal;
+  text-align: center;
+}
+.contact a {
+  font-family: "Bebas Neue";
+  font-size: 25px;
 }
 
+.our-story {
+  font-family: "Bebas Neue";
+  font-weight: 700;
+  font-style: italic;
+  position: relative;
+  max-width: 80%;
+  font-size: 21px;
+  text-align: center;
+  margin: 5% auto;
+  padding: 5%;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.our-story h2 {
+  font-family: "Alfa Slab One";
+  font-size: 50px;
+  font-style: normal;
+  margin-bottom: 5%;
+}
+.our-story .margin {
+  -webkit-animation: float 3s ease-in-out infinite;
+          animation: float 3s ease-in-out infinite;
+}
+
+.our-story::before {
+  background-image: url(../pictures/Burger\ Image\ 2.png);
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: -1;
+  bottom: -13%;
+  left: -15%;
+  width: 85%;
+  height: 100%;
+  -webkit-animation: float 3s ease-in-out infinite;
+          animation: float 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 footer .footer {
   background-image: url(../pictures/footer/footer\ picture.jpg);
   background-size: cover;
