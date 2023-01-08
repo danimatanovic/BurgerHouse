@@ -292,7 +292,7 @@ header .bottom-header .bottom-header-right img {
 }
 
 .upcoming-events {
-  margin-bottom: 7%;
+  margin-bottom: 10%;
 }
 .upcoming-events .item {
   height: 550px;
@@ -362,24 +362,14 @@ header .bottom-header .bottom-header-right img {
 
 .book-your-table {
   position: relative;
-  z-index: 2;
-}
-.book-your-table #left-burger {
-  position: absolute;
-  z-index: 4;
-  top: -42%;
-  left: -5%;
-  -webkit-animation: rotation 10s infinite linear;
-          animation: rotation 10s infinite linear;
-}
-.book-your-table #bottle {
-  position: absolute;
-  z-index: 2;
-  bottom: -32%;
-  left: 10%;
+  z-index: 3;
+  height: 630px;
+  overflow: hidden;
+  padding-bottom: 5%;
 }
 .book-your-table .book-your-table-inner-section {
   position: relative;
+  z-index: 3;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -387,6 +377,7 @@ header .bottom-header .bottom-header-right img {
   margin: 0 auto;
   text-align: center;
   max-width: 780px;
+  height: 530px;
 }
 .book-your-table .book-your-table-inner-section h3 {
   font-family: "Bebas Neue";
@@ -443,26 +434,123 @@ header .bottom-header .bottom-header-right img {
   position: absolute;
   background-repeat: no-repeat;
   z-index: -1;
-  top: 32%;
-  right: 0;
-  width: 17%;
+  bottom: -10%;
+  right: -17%;
+  width: 40%;
   height: 100%;
+  -webkit-animation: rotation 20s infinite linear;
+          animation: rotation 20s infinite linear;
+}
+@media screen and (max-width: 1399px) {
+  .book-your-table::before {
+    width: 100%;
+  }
+}
+
+.book-your-table-inner-section::before {
+  background-image: url(../pictures/Bottle.png);
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: -1;
+  bottom: -13%;
+  left: -35%;
+  width: 40%;
+  height: 100%;
+}
+
+.book-your-table::after {
+  background-image: url(../pictures/Burger\ 2.png);
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 2;
+  top: -6%;
+  left: -5%;
+  width: 28%;
+  height: 100%;
+  -webkit-animation: rotation 20s infinite linear;
+          animation: rotation 20s infinite linear;
+}
+@media screen and (max-width: 1399px) {
+  .book-your-table::after {
+    width: 100%;
+  }
 }
 
 @-webkit-keyframes rotation {
   from {
     transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
   }
   to {
     transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
   }
 }
 
 @keyframes rotation {
   from {
     transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
   }
   to {
     transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
   }
+}
+footer .footer {
+  background-image: url(../pictures/footer/footer\ picture.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  padding-top: 5%;
+  margin-bottom: 3%;
+}
+footer .footer .footer-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5%;
+  padding: 0 5%;
+}
+footer .footer .footer-left {
+  padding-bottom: 15%;
+}
+footer .footer .footer-left p {
+  margin: 5% 0;
+}
+footer .footer .footer-right {
+  font-size: 21px;
+  font-family: "Bebas Neue";
+  font-weight: 700;
+  max-width: 400px;
+  width: 100%;
+  margin: 20% auto 0 auto;
+}
+footer .footer .footer-right .footer-right-top {
+  margin-bottom: 3%;
+  display: flex;
+  align-items: center;
+}
+footer .footer .footer-right .footer-right-bottom {
+  display: flex;
+  align-items: center;
+}
+footer .footer .footer-right a {
+  color: white;
+  margin-left: 2%;
+}
+footer .footer .copyrights .margin {
+  padding-bottom: 1%;
+}
+footer .footer .copyrights .margin p a {
+  color: white;
+}
+footer .footer .copyrights .margin .media {
+  display: flex;
+  justify-content: flex-end;
+}
+footer .footer .copyrights .margin .media a {
+  margin-left: 2%;
 }/*# sourceMappingURL=main.css.map */
