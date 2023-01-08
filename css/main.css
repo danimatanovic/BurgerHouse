@@ -523,21 +523,21 @@ header .bottom-header .bottom-header-right img {
 }
 @media screen and (max-width: 1199px) {
   .try-today .margin {
-    margin-bottom: 10%;
     grid-template-columns: repeat(1, 1fr);
+    row-gap: normal;
   }
 }
 .try-today .margin p {
   position: absolute;
   z-index: 2;
   color: white;
-  font-size: 25px;
+  font-size: min(max(19px, 7vw), 25px);
   font-family: "Bebas Neue";
   left: 25px;
   top: 25px;
 }
 .try-today .margin p span {
-  font-size: 40px;
+  font-size: min(max(28px, 7vw), 40px);
   font-weight: 700;
 }
 .try-today .margin img {
@@ -551,15 +551,18 @@ header .bottom-header .bottom-header-right img {
   position: relative;
   border-radius: 15px;
 }
+@media screen and (max-width: 1199px) {
+  .try-today .margin img {
+    height: min(max(220px, 40vw), 345px);
+  }
+}
 .try-today .margin .try-burger-one {
   grid-row: span 2;
   position: relative;
 }
 @media screen and (max-width: 1199px) {
   .try-today .margin .try-burger-one {
-    max-height: 345px;
     grid-row: span 1;
-    height: 100%;
   }
 }
 .try-today .margin .try-burger-two {
@@ -585,7 +588,7 @@ header .bottom-header .bottom-header-right img {
   padding: 1%;
 }
 .choose-end-enjoy h2 {
-  font-size: 50px;
+  font-size: min(max(40px, 7vw), 50px);
   font-family: "Alfa Slab One";
   margin: 2% 0 1% 0;
 }
@@ -596,20 +599,16 @@ header .bottom-header .bottom-header-right img {
 .choose-end-enjoy .choose-burger {
   margin: 5% 0;
   display: grid;
-  grid-template-columns: auto auto auto;
-}
-@media screen and (max-width: 1199px) {
-  .choose-end-enjoy .choose-burger {
-    grid-template-columns: auto auto;
-  }
+  grid-template-columns: repeat(3, 1fr);
 }
 @media screen and (max-width: 767px) {
   .choose-end-enjoy .choose-burger {
-    grid-template-columns: auto;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
   }
 }
 .choose-end-enjoy .choose-burger img {
-  height: 325px;
+  height: min(max(250px, 20vw), 325px);
   width: 100%;
   max-width: 100%;
   -o-object-fit: contain;
@@ -619,7 +618,7 @@ header .bottom-header .bottom-header-right img {
 }
 .choose-end-enjoy .choose-burger span {
   margin-top: 5%;
-  font-size: 38px;
+  font-size: min(max(28px, 4vw), 38px);
   font-weight: 700;
   font-family: "Bebas Neue";
 }
@@ -644,19 +643,22 @@ header .bottom-header .bottom-header-right img {
   height: 550px;
   margin-top: 15px;
 }
+@media screen and (max-width: 767px) {
+  .upcoming-events .item {
+    height: 700px;
+  }
+}
 .upcoming-events .slide {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 50% 50%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   max-width: 90%;
   margin: 0 auto;
-  height: 500px;
   padding: 2%;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
   .upcoming-events .slide {
-    grid-template-columns: auto;
-    height: 100%;
+    grid-template-columns: 100%;
   }
 }
 .upcoming-events .slide .upcoming-events-left {
@@ -665,15 +667,15 @@ header .bottom-header .bottom-header-right img {
 .upcoming-events .slide .upcoming-events-left h3 {
   font-family: "Bebas Neue";
   font-weight: 700;
-  font-size: 29px;
+  font-size: min(max(20px, 10vw), 29px);
 }
 .upcoming-events .slide .upcoming-events-left h4 {
   font-family: "Alfa Slab One";
-  font-size: 42px;
+  font-size: min(max(30px, 3vw), 42px);
   margin-bottom: 8%;
 }
 .upcoming-events .slide .upcoming-events-left p {
-  font-size: 21px;
+  font-size: min(max(17px, 4vw), 21px);
 }
 .upcoming-events .slide .upcoming-events-right {
   height: 100%;
@@ -689,9 +691,9 @@ header .bottom-header .bottom-header-right img {
   -o-object-position: center;
      object-position: center;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .upcoming-events .slide .upcoming-events-right img {
-    height: 100%;
+    height: 250px;
   }
 }
 
@@ -768,19 +770,19 @@ header .bottom-header .bottom-header-right img {
   font-family: "Bebas Neue";
   font-size: 21px;
   font-size: 400;
-  color: #3D3D3D;
+  color: #3d3d3d;
 }
 .book-your-table .book-your-table-inner-section .book-data input:-ms-input-placeholder {
   font-family: "Bebas Neue";
   font-size: 21px;
   font-size: 400;
-  color: #3D3D3D;
+  color: #3d3d3d;
 }
 .book-your-table .book-your-table-inner-section .book-data input::placeholder {
   font-family: "Bebas Neue";
   font-size: 21px;
   font-size: 400;
-  color: #3D3D3D;
+  color: #3d3d3d;
 }
 .book-your-table .book-your-table-inner-section .book-data input[type=submit] {
   padding: 10px;

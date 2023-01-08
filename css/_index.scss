@@ -4,20 +4,20 @@
         display: grid;
         grid-template-columns: auto auto;
         gap: 3%;
-        @include lt-xl{
-            margin-bottom: 10%;
-            grid-template-columns: repeat(1,1fr);
+        @include lt-xl {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: normal;
         }
         p {
             position: absolute;
             z-index: 2;
             color: white;
-            font-size: 25px;
+            font-size: min(max(19px, 7vw), 25px);
             font-family: "Bebas Neue";
             left: 25px;
             top: 25px;
             span {
-                font-size: 40px;
+                font-size: min(max(28px, 7vw), 40px);
                 font-weight: 700;
             }
         }
@@ -29,14 +29,15 @@
             object-position: center;
             position: relative;
             border-radius: 15px;
+            @include lt-xl {
+                height: min(max(220px, 40vw), 345px);
+            }
         }
         .try-burger-one {
             grid-row: span 2;
             position: relative;
-            @include lt-xl{
-                max-height: 345px;
+            @include lt-xl {
                 grid-row: span 1;
-                height: 100%;
             }
         }
         .try-burger-two {
@@ -60,42 +61,41 @@
         padding: 1%;
     }
     h2 {
-        font-size: 50px;
-        font-family: 'Alfa Slab One';
-        margin:2% 0 1% 0;
+        font-size: min(max(40px, 7vw), 50px);
+        font-family: "Alfa Slab One";
+        margin: 2% 0 1% 0;
     }
-    p{
+    p {
         max-width: 80%;
         margin: 0 auto;
     }
-    .choose-burger{
+    .choose-burger {
         margin: 5% 0;
         display: grid;
-        grid-template-columns: auto auto auto;
-        @include lt-xl{
-            grid-template-columns: auto auto; 
+        grid-template-columns: repeat(3,1fr);
+        @include lt-md {
+            grid-template-columns: repeat(1,1fr);
+            row-gap: 10px;
         }
-        @include lt-md{
-            grid-template-columns: auto; 
-        }
-        img{
-            height: 325px;
+        img {
+            height: min(max(250px, 20vw), 325px);
             width: 100%;
             max-width: 100%;
             object-fit: contain;
             object-position: center;
         }
-            span{margin-top: 5%;
-                font-size: 38px;
-                font-weight: 700;
-                font-family: "Bebas Neue";
-            }
-        p{
+        span {
+            margin-top: 5%;
+            font-size: min(max(28px, 4vw), 38px);
+            font-weight: 700;
+            font-family: "Bebas Neue";
+        }
+        p {
             margin-top: 4%;
         }
-        button{
+        button {
             background-color: #bf2121;
-            font-family: 'Alfa Slab One';
+            font-family: "Alfa Slab One";
             color: white;
             padding: 3%;
             border: none;
@@ -107,131 +107,132 @@
 }
 .upcoming-events {
     margin-bottom: 10%;
-.item{
-    height: 550px;
-    margin-top: 15px;
-}
-.slide{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    max-width: 90%;
-    margin: 0 auto;
-    height: 500px;
-    padding: 2%;
-    @include lt-lg{
-        grid-template-columns: auto;
-        height: 100%;
+    .item {
+        height: 550px;
+        margin-top: 15px;
+        @include lt-md{
+            height: 700px;
+        }
     }
-    .upcoming-events-left{
-        padding: 5%;
-     h3{
-        font-family: "Bebas Neue";
-        font-weight: 700;
-        font-size: 29px;
-     }
-     h4{
-        font-family: 'Alfa Slab One';
-        font-size: 42px;
-        margin-bottom: 8%;
-     }
-     p{
-        font-size: 21px;
-     }
-    }
-    .upcoming-events-right{
-        height: 100%;
-        max-width: 100%;
-        width: 100%;
-        img{
-            height: 435px;
-            max-width: 100%;
-            object-fit: cover;
-            width: 100%;
-            object-position: center;
-            @include lt-xl{
-                height: 100%;
+    .slide {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 2%;
+        @include lt-md {
+            grid-template-columns: 100%;
+        }
+        .upcoming-events-left {
+            padding: 5%;
+            h3 {
+                font-family: "Bebas Neue";
+                font-weight: 700;
+                font-size: min(max(20px, 10vw), 29px);
+            }
+            h4 {
+                font-family: "Alfa Slab One";
+                font-size: min(max(30px, 3vw), 42px);
+                margin-bottom: 8%;
+            }
+            p {
+                font-size: min(max(17px, 4vw), 21px);
             }
         }
-    } 
-}}
-        
+        .upcoming-events-right {
+            height: 100%;
+            max-width: 100%;
+            width: 100%;
+            img {
+                height: 435px;
+                max-width: 100%;
+                object-fit: cover;
+                width: 100%;
+                object-position: center;
+                @include lt-md {
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+
 .upcoming-events .upcoming-events-slide .slick-dots li button:before {
     font-size: 80px;
 }
-.upcoming-events .upcoming-events-slide .slick-dots li.slick-active button:before
-{
+.upcoming-events .upcoming-events-slide .slick-dots li.slick-active button:before {
     opacity: 1;
     color: #ffbf45;
 }
-.upcoming-events .upcoming-events-slide .slick-dots{
-   bottom: 22%;
-   text-align: left;
-   margin-left: 8%;
-   max-width: 92%;
+.upcoming-events .upcoming-events-slide .slick-dots {
+    bottom: 22%;
+    text-align: left;
+    margin-left: 8%;
+    max-width: 92%;
 }
 .upcoming-events .upcoming-events-slide .slick-dots li button:hover:before,
-.slick-dots li button:focus:before{
+.slick-dots li button:focus:before {
     color: #ffbf45;
     opacity: 0.5;
 }
-.book-your-table{
+.book-your-table {
     position: relative;
     z-index: 3;
     height: 630px;
     overflow: hidden;
     padding-bottom: 5%;
-.book-your-table-inner-section{
-    position: relative;
-    z-index: 3;
-    max-width: fit-content;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    max-width: 780px;
-    height: 530px;
-    h3{
-        font-family: "Bebas Neue";
-        font-weight: 700;
-        font-size: 29px;
-     }
-     h4{
-        font-family: 'Alfa Slab One';
-        font-size: 42px;
-        margin-bottom: 8%;
-     }
-     .book-data{
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 3%;
-        @include lt-md{
-            grid-template-columns: auto;
+    .book-your-table-inner-section {
+        position: relative;
+        z-index: 3;
+        max-width: fit-content;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 780px;
+        height: 530px;
+        h3 {
+            font-family: "Bebas Neue";
+            font-weight: 700;
+            font-size: 29px;
         }
-        input{
-            height: 60px;
-            padding: 20px 20px 15px 20px;
-            width: 100%;
-            margin-bottom: 7%;
-            border-radius: 6px;
-            border: 1px solid rgb(158, 156, 156);
+        h4 {
+            font-family: "Alfa Slab One";
+            font-size: 42px;
+            margin-bottom: 8%;
         }
-        input::placeholder{
-            font-family: "Bebas Neue"; 
-            font-size: 21px;
-            font-size: 400;
-            color: #3D3D3D;
+        .book-data {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 3%;
+            @include lt-md {
+                grid-template-columns: auto;
+            }
+            input {
+                height: 60px;
+                padding: 20px 20px 15px 20px;
+                width: 100%;
+                margin-bottom: 7%;
+                border-radius: 6px;
+                border: 1px solid rgb(158, 156, 156);
+            }
+            input::placeholder {
+                font-family: "Bebas Neue";
+                font-size: 21px;
+                font-size: 400;
+                color: #3d3d3d;
+            }
+            input[type="submit"] {
+                padding: 10px;
+                background-color: rgba(191, 34, 34, 1);
+                font-family: "Alfa Slab One";
+                font-size: 21px;
+                color: white;
+                cursor: pointer;
+            }
         }
-        input[type="submit"]{
-          padding: 10px;
-          background-color: rgba(191, 34, 34, 1);
-          font-family: 'Alfa Slab One';
-          font-size: 21px;
-          color: white;
-          cursor: pointer;
-        }
-
-     }
-}}
+    }
+}
 .book-your-table::before {
     background-image: url(../pictures/Burger\ top.png);
     content: "";
@@ -242,8 +243,8 @@
     right: -17%;
     width: 40%;
     height: 100%;
-    animation: rotation  20s infinite linear;
-    @include lt-xxxl{
+    animation: rotation 20s infinite linear;
+    @include lt-xxxl {
         width: 100%;
     }
 }
@@ -270,37 +271,37 @@
     width: 28%;
     height: 100%;
     animation: rotation 20s infinite linear;
-    @include lt-xxxl{
+    @include lt-xxxl {
         width: 100%;
     }
 }
 @keyframes rotation {
     from {
-      transform: rotate(0deg);
-      -webkit-transform:rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     to {
-      transform: rotate(359deg);
-      -webkit-transform:rotate(359deg);
+        transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
     }
-  }
-.contact{
+}
+.contact {
     margin-top: 5%;
     text-align: center;
-    h2{
-        font-family: 'Alfa Slab One';
+    h2 {
+        font-family: "Alfa Slab One";
         font-size: 50px;
         margin-bottom: 2%;
         font-style: normal;
         text-align: center;
     }
-    a{
-        font-family: 'Bebas Neue';
+    a {
+        font-family: "Bebas Neue";
         font-size: 25px;
     }
 }
-.our-story{
-    font-family: 'Bebas Neue';
+.our-story {
+    font-family: "Bebas Neue";
     font-weight: 700;
     font-style: italic;
     position: relative;
@@ -311,8 +312,8 @@
     padding: 5%;
     background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    h2{
-        font-family: 'Alfa Slab One';
+    h2 {
+        font-family: "Alfa Slab One";
         font-size: 50px;
         font-style: normal;
         margin-bottom: 5%;
@@ -332,12 +333,12 @@
 }
 @keyframes float {
     0% {
-      transform: translateY(0px);
+        transform: translateY(0px);
     }
     50% {
-      transform: translateY(20px);
+        transform: translateY(20px);
     }
     100% {
-      transform: translateY(0px);
+        transform: translateY(0px);
     }
-  }
+}
